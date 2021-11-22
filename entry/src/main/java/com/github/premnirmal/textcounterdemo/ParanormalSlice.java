@@ -24,11 +24,9 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 /**
- * Created by prem on 10/28/14.
- * Example usage of {@link com.github.premnirmal.textcounter.CounterView}
+ * Sample app to test the textcounter library functionality.
  */
 public class ParanormalSlice extends AbilitySlice {
-
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);

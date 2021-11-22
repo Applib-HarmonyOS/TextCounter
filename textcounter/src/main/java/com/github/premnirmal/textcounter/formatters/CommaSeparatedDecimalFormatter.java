@@ -5,8 +5,8 @@ import java.text.DecimalFormat;
 
 /**
  * Created by prem on 10/28/14.
- * <p/>
- * Formats the text to a comma separated decimal with 2vp
+ *
+ * <p>Formats the text to a comma separated decimal with 2vp
  */
 public class CommaSeparatedDecimalFormatter implements Formatter {
 

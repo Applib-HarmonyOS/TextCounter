@@ -2,8 +2,8 @@ package com.github.premnirmal.textcounter;
 
 /**
  * Created by prem on 10/28/14.
- * </p>
- * Used to format the float value of the text to be set.
+ *
+ * <p>Used to format the float value of the text to be set.
  */
 public interface Formatter {
 

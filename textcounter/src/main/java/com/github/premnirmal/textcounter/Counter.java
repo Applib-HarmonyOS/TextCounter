@@ -4,8 +4,8 @@ import ohos.eventhandler.EventHandler;
 
 /**
  * Created by prem on 10/28/14.
- * <p/>
- * Class that handles the counting up/down of the text value
+ *
+ * <p>Class that handles the counting up/down of the text value
  */
 class Counter implements Runnable {
     final CounterView view;

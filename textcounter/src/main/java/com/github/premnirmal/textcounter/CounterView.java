@@ -17,8 +17,8 @@ import com.hmos.compat.utils.AttrUtils;
 
 /**
  * Created by prem on 10/28/14.
- * </p>
- * A TextView that counts values depending on the attributes set via xml or via java.
+ *
+ * <p>A TextView that counts values depending on the attributes set via xml or via java.
  * Depending on the value set in {@link #setAutoStart(boolean)}, the counter will start.
  * You may call {@link #start()} to start manually at any time.
  */
@@ -123,47 +123,43 @@ public class CounterView extends Text implements BindStateChangedListener {
             this.counterType = CounterType.NUMBER;
             return;
         }
-        try {
-            final CharSequence prefix1 = AttrUtils.getStringFromAttr(attrs, "prefix");
-            if (prefix1 != null) {
-                this.prefix = prefix1.toString();
-            } else {
-                this.prefix = "";
-            }
-            final CharSequence suffix1 = AttrUtils.getStringFromAttr(attrs, "suffix");
-            if (suffix1 != null) {
-                this.suffix = suffix1.toString();
-            } else {
-                this.suffix = "";
-            }
-            final CharSequence text1 = AttrUtils.getCharSequenceFromAttr(attrs, "ohos_text");
-            if (text1 != null) {
-                this.text = text1.toString();
-            } else {
-                this.text = "";
-            }
-            this.timeInterval = (long) AttrUtils.getFloatFromAttr(attrs, "timeInterval", DEFAULT_INTERVAL);
-            this.increment = AttrUtils.getFloatFromAttr(attrs, "incrementValue", DEFAULT_INCREMENT);
-            this.startValue = AttrUtils.getFloatFromAttr(attrs, "startValue", 0f);
-            this.endValue = AttrUtils.getFloatFromAttr(attrs, "endValue", 0f);
-            this.autoStart = AttrUtils.getBooleanFromAttr(attrs, "autoStart", true);
-            this.autoFormat = AttrUtils.getBooleanFromAttr(attrs, "formatText", true);
-            final int type = getHandletype(AttrUtils.getStringFromAttr(attrs, "type", ""));
-            switch (type) {
-                case 0:
-                    counterType = CounterType.NUMBER;
-                    break;
-                case 1:
-                    counterType = CounterType.DECIMAL;
-                    break;
-                case 2:
-                    counterType = CounterType.BOTH;
-                    break;
-                default:
-                    HiLog.debug(HI_LOG_LABEL, "default switch case in init");
-            }
-        } finally {
-            //finally block
+        final CharSequence prefix1 = AttrUtils.getStringFromAttr(attrs, "prefix");
+        if (prefix1 != null) {
+            this.prefix = prefix1.toString();
+        } else {
+            this.prefix = "";
+        }
+        final CharSequence suffix1 = AttrUtils.getStringFromAttr(attrs, "suffix");
+        if (suffix1 != null) {
+            this.suffix = suffix1.toString();
+        } else {
+            this.suffix = "";
+        }
+        final CharSequence text1 = AttrUtils.getCharSequenceFromAttr(attrs, "ohos_text");
+        if (text1 != null) {
+            this.text = text1.toString();
+        } else {
+            this.text = "";
+        }
+        this.timeInterval = (long) AttrUtils.getFloatFromAttr(attrs, "timeInterval", DEFAULT_INTERVAL);
+        this.increment = AttrUtils.getFloatFromAttr(attrs, "incrementValue", DEFAULT_INCREMENT);
+        this.startValue = AttrUtils.getFloatFromAttr(attrs, "startValue", 0f);
+        this.endValue = AttrUtils.getFloatFromAttr(attrs, "endValue", 0f);
+        this.autoStart = AttrUtils.getBooleanFromAttr(attrs, "autoStart", true);
+        this.autoFormat = AttrUtils.getBooleanFromAttr(attrs, "formatText", true);
+        final int type = getHandletype(AttrUtils.getStringFromAttr(attrs, "type", ""));
+        switch (type) {
+            case 0:
+                counterType = CounterType.NUMBER;
+                break;
+            case 1:
+                counterType = CounterType.DECIMAL;
+                break;
+            case 2:
+                counterType = CounterType.BOTH;
+                break;
+            default:
+                HiLog.debug(HI_LOG_LABEL, "default switch case in init");
         }
         counter = new Counter(this, startValue, endValue, timeInterval, increment, mHandler);
         updateCounterType();

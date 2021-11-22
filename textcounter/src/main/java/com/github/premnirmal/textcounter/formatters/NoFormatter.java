@@ -4,8 +4,8 @@ import com.github.premnirmal.textcounter.Formatter;
 
 /**
  * Created by prem on 10/28/14.
- * <p/>
- * Performs no formatting
+ *
+ * <p>Performs no formatting
  */
 public class NoFormatter implements Formatter {
     @Override
