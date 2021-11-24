@@ -10,7 +10,7 @@ A simple subclass of harmony's Text that counts up or down. Customize the counti
 
 See the demo project for more implementation details.
 
-<img src="screenshots/TextCounterDemo.gif" width="256">
+<img src="screenshots/TextCounter.gif" width="256">
 
 ## Dependency
 1. For using TextCounter module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
