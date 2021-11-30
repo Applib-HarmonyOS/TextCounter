@@ -1,0 +1,25 @@
+{
+  "app": {
+    "bundleName": "com.github.premnirmal.textcounterdemo",
+    "vendor": "github",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "com.github.premnirmal.textcounter",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "textcounter",
+      "moduleType": "har"
+    }
+  }
+}
