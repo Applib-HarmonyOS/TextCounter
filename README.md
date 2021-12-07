@@ -1,3 +1,6 @@
+[![.github/workflows/main.yml](https://github.com/applibgroup/TextCounter/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/TextCounter/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_TextCounter&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=applibgroup_TextCounter)
+
 # TextCounter
 
 A HMOS library which counts up/down of the text value.
@@ -28,6 +31,14 @@ See the demo project for more implementation details.
 		implementation fileTree(dir: 'libs', include: ['*.har'])
 		testImplementation 'junit:junit:4.13'
 	}
+```
+
+3. For using textcounter from a remote repository in separate application, add the below dependencies in entry/build.gradle file.
+``` groovy
+         dependencies {
+	         implementation 'dev.applibgroup:textcounter:1.0.1'
+	         testCompile 'junit:junit:4.13'
+         }
 ```
 
 ## Usage
